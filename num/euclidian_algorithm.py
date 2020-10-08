@@ -1,9 +1,20 @@
-def euclidian_algorithm(a, b):
+# В некторых случаях долгий
+def euclidian_algorithm_heavy(a, b):
     while a != b:
         if a > b:
             a = a - b
         else:
             b = b - a
+    return a
+
+
+# Более быстрый и лёгкий
+def euclidian_algorithm(a, b):
+    while b > 0:
+        # c = a % b
+        # a = b
+        # b = c
+        a, b = b, a % b
     return a
 
 
